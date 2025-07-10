@@ -37,6 +37,8 @@ A modern, responsive weather dashboard web app that displays current weather and
 - `style.css` - Custom styles
 - `script.js` - Main JavaScript logic
 - `README.md` - Project documentation
+## Live Demo
+- https://achireddy3154.github.io/Weather_App/
 
 ## Browser Support
 
