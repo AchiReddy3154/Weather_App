@@ -1,42 +1,48 @@
-# Weather Dashboard 🌤️
 
-A modern, responsive weather dashboard web app built for developers and portfolio showcases. Get real-time weather and 5-day forecasts for any city, with a beautiful UI, smooth animations, and interactive features.
+# Weather Dashboard
 
-## 🚀 Features
-- City search bar with autocomplete & recent search history
-- Current weather: city, country flag, date/time, temperature, description, icon, humidity, wind, feels like
-- 5-day forecast cards: min/max temps, icons, day names
-- Unit toggle: °C/°F
-- Loading animation while fetching data
-- Error messages for invalid cities or API issues
-- Responsive layout (mobile & desktop)
-- Dark/light mode toggle
-- Geolocation support (auto-fetch current city)
-- Smooth UI animations, glassmorphism style
+A modern, responsive weather dashboard web app that displays current weather and a 5-day forecast for any city. Users can search by city name or use their device's location to get local weather instantly.
 
-## 🛠️ Tech Stack
-- HTML5, CSS3 (Tailwind CSS + custom styles)
-- JavaScript (modular, ES6+)
-- [WeatherAPI.com](https://www.weatherapi.com/) for weather data
+## Features
 
-## 🌐 Live Demo
-[View Live Demo](#) <!-- Replace # with your deployed link -->
+- Search for weather by city name
+- Get current weather and 5-day forecast
+- Use your device's location to get local weather
+- Search history for quick access to recent cities
+- Responsive design for desktop and mobile
+- Clean, dark-themed user interface
 
-## 📦 Installation
-1. Clone this repo:
-   ```bash
-   git clone https://github.com/yourusername/weather-dashboard.git
-   cd weather-dashboard
+## How It Works
+
+- Enter a city name and click "Search" to view weather data.
+- Click the location button to use your device's geolocation and get local weather.
+- The app uses the WeatherAPI.com service for weather data.
+
+## Setup and Usage
+
+1. Clone the repository:
    ```
-2. Get a free API key from [WeatherAPI.com](https://www.weatherapi.com/).
-3. Open `script.js` and replace `YOUR_WEATHERAPI_KEY` with your API key.
-4. Open `index.html` in your browser and enjoy!
+   git clone https://github.com/AchiReddy3154/Weather_App.git
+   ```
+2. Open the project folder:
+   Navigate to the project directory and open `index.html` in your web browser.
 
-## ✨ Screenshots
-<!-- Add screenshots here -->
+3. API Key:
+   - The app requires a free API key from https://www.weatherapi.com/
+   - Replace the `API_KEY` value in `script.js` with your own key if needed.
 
-## 📄 License
-MIT
+## Project Structure
 
----
-Made with ❤️ for your portfolio. 
+- `index.html` - Main HTML file
+- `style.css` - Custom styles
+- `script.js` - Main JavaScript logic
+- `README.md` - Project documentation
+
+## Browser Support
+
+- Works in all modern browsers
+- Geolocation requires user permission and may not work in all environments (for example, some incognito/private modes)
+
+## License
+
+This project is open source and available under the MIT License.
