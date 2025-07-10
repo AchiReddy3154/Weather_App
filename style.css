@@ -1,0 +1,91 @@
+/* Weather Dashboard Styles */
+body {
+  background: #121212;
+  color: #f1f1f1;
+}
+.font-inter, body { font-family: 'Inter', 'Poppins', 'Space Grotesk', Arial, sans-serif; }
+
+/* Glassmorphism card for dark theme */
+.glass-card {
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Loader animation - cyan accent */
+.loader {
+  border: 6px solid #23272f;
+  border-top: 6px solid #4FC3F7;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Weather icon hover and contrast */
+.forecast-card img, .weather-details img {
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1), filter 0.3s;
+  filter: brightness(1.3) drop-shadow(0 2px 8px #4FC3F7aa);
+}
+.forecast-card:hover img, .weather-details img:hover {
+  transform: scale(1.15) rotate(-8deg);
+  filter: brightness(1.5) drop-shadow(0 4px 16px #4FC3F7cc);
+}
+
+/* Card hover */
+.forecast-card {
+  transition: box-shadow 0.3s, background 0.3s, opacity 0.5s;
+  background: linear-gradient(135deg, rgba(30,30,30,0.9) 60%, rgba(79,195,247,0.08) 100%);
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.4);
+  border-radius: 12px;
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+.forecast-card:hover {
+  box-shadow: 0 8px 32px 0 #4FC3F733;
+  background: linear-gradient(135deg, rgba(30,30,30,1) 40%, rgba(79,195,247,0.18) 100%);
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Button focus/hover */
+button:focus, button:hover {
+  outline: none;
+  box-shadow: 0 0 0 2px #4FC3F7aa;
+}
+
+/* Input styles */
+input[type="text"] {
+  background: #23272f;
+  border: 1px solid #333;
+  color: #fff;
+  caret-color: #4FC3F7;
+}
+input[type="text"]::placeholder {
+  color: #fff;
+  opacity: 0.7;
+}
+
+/* Responsive tweaks */
+@media (max-width: 700px) {
+  .glass-card { padding: 1rem 0.5rem; }
+}
+
+
+
+/* Animated Weather Background (container is #weather-bg) */
+#weather-bg {
+  z-index: 0;
+  pointer-events: none;
+  transition: background 1s;
+} 

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard 🌤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500;700&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen font-inter bg-[#121212] text-[#f1f1f1] transition-colors duration-500">
+  <!-- Animated Weather Background (CSS/SVG, controlled by JS) -->
+  <div id="weather-bg" class="fixed inset-0 z-0 pointer-events-none"></div>
+  <div class="flex flex-col items-center justify-center min-h-screen px-2 py-6 relative z-10">
+    <div class="w-full max-w-2xl glass-card p-6 rounded-2xl shadow-2xl">
+      <header class="flex flex-row items-center justify-between mb-6">
+        <h1 class="text-3xl md:text-4xl font-bold tracking-tight font-poppins">Weather Dashboard <span class="align-middle">🌤️</span></h1>
+        <!-- Removed dark/light mode toggle button -->
+      </header>
+      <section class="mb-6">
+        <div class="flex flex-col md:flex-row gap-3 items-center">
+          <div class="relative w-full md:w-2/3">
+            <input id="city-input" type="text" placeholder="Search city..." autocomplete="off" class="w-full px-5 py-3 rounded-xl bg-[#23272f] border border-[#333] text-lg focus:outline-none focus:ring-2 focus:ring-[#4FC3F7] shadow-md transition text-white placeholder-white/70" />
+            <ul id="search-history" class="absolute left-0 right-0 mt-1 bg-[#23272f] rounded-xl shadow-lg z-10 hidden text-[#f1f1f1]"></ul>
+          </div>
+          <button id="search-btn" class="px-6 py-3 rounded-xl bg-gradient-to-r from-[#4FC3F7] to-[#1976D2] text-white font-semibold shadow-lg transition hover:shadow-cyan-400/40">Search</button>
+          <button id="geo-btn" class="px-4 py-3 rounded-xl bg-[#23272f] text-[#4FC3F7] font-semibold shadow-lg transition hover:bg-[#23272f]/80" title="Use my location">📍</button>
+          <!-- Removed unit toggle button -->
+        </div>
+      </section>
+      <section id="loading" class="flex justify-center items-center my-6 hidden">
+        <div class="loader"></div>
+      </section>
+      <section id="error-message" class="hidden text-center text-red-400 font-semibold mb-4"></section>
+      <section id="weather-info-wrapper" class="mb-8 transition-fade">
+        <div id="weather-info">
+          <!-- Current weather will be injected here -->
+        </div>
+      </section>
+      <section>
+        <h2 class="text-xl font-semibold text-[#4FC3F7] mb-4">5-Day Forecast</h2>
+        <div id="forecast-cards" class="grid grid-cols-2 md:grid-cols-5 gap-4">
+          <!-- Forecast cards will be injected here -->
+        </div>
+      </section>
+    </div>
+    <footer class="mt-8 text-[#cccccc] text-sm">
+      <span>Made with <span class="text-[#4FC3F7]">♥</span> for your portfolio</span>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html> 
