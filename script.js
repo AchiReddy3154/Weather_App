@@ -1,6 +1,6 @@
 // Weather Dashboard Main Script (Dark/Light Theme, Animated Weather Background)
 // Insert your WeatherAPI.com API key below
-const API_KEY = '44c7fe2b50dc404a88c50216251007'; // <-- Replace with your WeatherAPI.com API key
+const API_KEY = 'YOUR_API_KEY'; // <-- Replace with your WeatherAPI.com API key
 const BASE_URL = 'https://api.weatherapi.com/v1/';
 
 const cityInput = document.getElementById('city-input');
